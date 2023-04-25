@@ -13,43 +13,20 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
-    "description": {
-      "type": "text"
+    "quantity": {
+      "type": "integer"
     },
-    "price": {
-      "type": "decimal",
-      "required": true
-    },
-    "category": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::category.category",
-      "inversedBy": "products"
-    },
-    "cover": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
+    "img": {
       "allowedTypes": [
-        "images"
-      ]
-    },
-    "available": {
-      "type": "boolean",
-      "default": true
-    },
-    "oldPrice": {
-      "type": "decimal"
-    },
-    "imgAll": {
-      "allowedTypes": [
-        "images"
+        "images",
+        "files",
+        "videos",
+        "audios"
       ],
       "type": "media",
-      "multiple": true
+      "multiple": false
     }
   }
 }
